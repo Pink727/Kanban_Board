@@ -19,6 +19,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
 
     req.user = decoded as JwtPayload;
     next();
-    return; 
   });
+
+  return; // Ensure all code paths return a value
 };
