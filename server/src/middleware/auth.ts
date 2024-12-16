@@ -15,7 +15,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY || '') as JwtPayload;
     req.user = decoded;
-    next();
+    return next();
   } catch (err) {
     return res.status(403).json({ message: 'Failed to authenticate token' });
   }
