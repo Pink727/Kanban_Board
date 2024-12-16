@@ -19,5 +19,6 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
 
     req.user = decoded as JwtPayload;
     next();
+    return; 
   });
 };
