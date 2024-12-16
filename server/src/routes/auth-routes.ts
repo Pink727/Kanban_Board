@@ -19,9 +19,12 @@ export const login = async (req: Request, res: Response) => {
     }
 
     const token = jwt.sign({ username: user.username }, process.env.JWT_SECRET_KEY || '', { expiresIn: '1h' });
-    res.json({ token });
+    return res.json({ token });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    if (error instanceof Error) {
+      return res.status(500).json({ message: error.message });
+    }
+    return res.status(500).json({ message: 'An unknown error occurred' });
   }
 };
 
