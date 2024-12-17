@@ -1,3 +1,9 @@
+/**
+ * This module provides the API call for user login.
+ * It sends a POST request to the /auth/login endpoint with the user's login information.
+ * If the login is successful, it returns the response data which includes the JWT token.
+ */
+
 import { UserLogin } from "../interfaces/UserLogin";
 
 const login = async (userInfo: UserLogin) => {

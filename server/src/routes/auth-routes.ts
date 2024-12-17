@@ -1,3 +1,9 @@
+/**
+ * This module defines the authentication routes for the server.
+ * It includes a POST /login route for user login.
+ * The login function checks the user's credentials and returns a JWT token if successful.
+ */
+
 import { Router, Request, Response } from 'express';
 import { User } from '../models/user.js';
 import jwt from 'jsonwebtoken';

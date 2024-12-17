@@ -1,3 +1,9 @@
+/**
+ * This middleware function verifies the JWT token in the request headers.
+ * If the token is valid, it adds the user data to the request object and calls the next middleware.
+ * If the token is invalid or missing, it returns an appropriate error response.
+ */
+
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 

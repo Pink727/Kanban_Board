@@ -1,3 +1,9 @@
+/**
+ * This module sets up the main router for the server.
+ * It includes routes for authentication and API endpoints.
+ * The API routes are protected by the authenticateToken middleware.
+ */
+
 import dotenv from 'dotenv';
 dotenv.config();
 

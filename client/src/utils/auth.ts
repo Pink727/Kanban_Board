@@ -1,3 +1,9 @@
+/**
+ * This module provides an authentication service for managing JWT tokens.
+ * It includes methods for getting the user profile, checking if the user is logged in,
+ * checking if the token is expired, getting the token from local storage, logging in, and logging out.
+ */
+
 import { jwtDecode } from 'jwt-decode';
 
 class AuthService {
